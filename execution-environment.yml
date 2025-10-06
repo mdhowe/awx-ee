@@ -29,6 +29,8 @@ dependencies:
       - name: ansible.windows
       - name: redhatinsights.insights
       - name: kubevirt.core
+        # this gives us community.general.dig, among others
+      - name: community.general
   system: |
     git-core [platform:rpm]
     python3.11-devel [platform:rpm compile]
@@ -62,6 +64,8 @@ dependencies:
     pyyaml
     six
     receptorctl
+    dnspython
+    netaddr
 additional_build_steps:
   append_base:
     - RUN $PYCMD -m pip install -U pip
