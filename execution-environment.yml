@@ -37,6 +37,10 @@ dependencies:
       - name: ansible.utils
         # per https://github.com/ansible-collections/ansible.utils/releases/tag/v6.0.0 need this for ansible-core compatability
         version: "<6.0.0"
+        # for backwards compatability (cf https://github.com/ansible/ansible/issues/77223)
+      - name: ansible.netcommon
+        # per https://github.com/ansible-collections/ansible.netcommon/releases need this for ansible-core < 2.16 compatability
+        version: "<8.0.0"
   system: |
     git-core [platform:rpm]
     python3.11-devel [platform:rpm compile]
