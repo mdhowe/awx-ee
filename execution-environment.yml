@@ -31,6 +31,12 @@ dependencies:
       - name: kubevirt.core
         # this gives us community.general.dig, among others
       - name: community.general
+        # this gives us netbox integration
+      - name: netbox.netbox
+        version: "<3.0.0"
+      - name: ansible.utils
+        # per https://github.com/ansible-collections/ansible.utils/releases/tag/v6.0.0 need this for ansible-core compatability
+        version: "<6.0.0"
   system: |
     git-core [platform:rpm]
     python3.11-devel [platform:rpm compile]
